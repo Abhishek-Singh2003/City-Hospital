@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Video Background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8; /* Adjusted for better readability */
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #d1ccef 0%, #9898cd 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem); /* Responsive padding */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1613px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive scaling */
+    color: #005670;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hamburger {
+    display: none; /* Hidden by default, shown on mobile */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #005670;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #005670;
+    font-weight: bold;
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive font size */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff5733;
+    transform: scale(1.1);
+}
+
+/* Services Hero Section */
+.services-hero {
+    min-height: 25vh; /* Flexible height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.services-hero-content {
+    background: rgba(0, 86, 112, 0.8);
+    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 5vw, 3rem); /* Responsive padding */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.services-hero h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive heading */
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.services-hero p {
+    font-size: clamp(1rem, 3vw, 1.25rem); /* Responsive text */
+    color: #fff;
+}
+
+/* Services Grid */
+.services-grid {
+    max-width: 1400px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min width */
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-31px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: clamp(150px, 25vw, 200px); /* Responsive image height */
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: #005670;
+    padding: 1rem 1.25rem 0.5rem;
+}
+
+.service-card p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: #666;
+    padding: 0 1.25rem 1.25rem;
+}
+
+.service-card a {
+    text-decoration: none;
+}
+
+/* Wrapper for Alphabet and Search Section */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Alphabet Container */
+.container {
+    flex: 1; /* Takes available space */
+    min-width: 300px; /* Minimum width for usability */
+    height: auto; /* Flexible height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    background-color: #005670;
+    border-radius: 20px;
+    padding: 1rem;
+    color: aqua;
+}
+
+.item {
+    width: clamp(50px, 10vw, 69px); /* Responsive size */
+    height: clamp(50px, 10vw, 71px);
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #004050; /* Darker shade on hover */
+    color: #ff5733;
+}
+
+.item a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font-size: clamp(1.25rem, 4vw, 1.875rem); /* Responsive font */
+}
+
+.item a:hover {
+    text-decoration: none;
+}
+
+/* Search Diseases Section */
+.abhi1 {
+    flex: 1; /* Takes available space */
+    min-width: 300px; /* Minimum width for usability */
+    background-color: #005670;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abhi1 h1 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.abhi1 p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #005670;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .wrapper {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(135deg, #d1ccef 0%, #9898cd 100%);
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .services-hero {
+        min-height: 20vh;
+        padding: 1rem;
+    }
+
+    .services-hero-content {
+        padding: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .container, .abhi1 {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .item {
+        width: clamp(40px, 8vw, 60px);
+        height: clamp(40px, 8vw, 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+
+    .services-hero-content {
+        padding: 1rem;
+    }
+
+    .services-hero h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .services-hero p {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+    }
+
+    .service-card {
+        margin: 0 0.5rem;
+    }
+
+    .service-card img {
+        height: clamp(120px, 20vw, 180px);
+    }
+
+    .service-card h3 {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        padding: 0.75rem 1rem 0.25rem;
+    }
+
+    .service-card p {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        padding: 0 1rem 1rem;
+    }
+
+    .item a {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+}
+
+@media (max-width: 320px) {
+    .services-hero {
+        min-height: 15vh;
+    }
+
+    .services-hero-content {
+        padding: 0.75rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .container, .abhi1 {
+        padding: 0.75rem;
+    }
+
+    .item {
+        width: clamp(35px, 7vw, 50px);
+        height: clamp(35px, 7vw, 50px);
+    }
+
+    .item a {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+}
